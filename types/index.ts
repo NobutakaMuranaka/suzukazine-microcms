@@ -43,6 +43,5 @@ export interface CategoryCountType {
 
 export interface SidebarData {
   latestBlogs: BlogType[]
-  archiveMonths: ArchiveMonthType[]
   categoryCounts: CategoryCountType[]
 }

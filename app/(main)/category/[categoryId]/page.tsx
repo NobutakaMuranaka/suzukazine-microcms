@@ -2,6 +2,7 @@ import Category from "@/app/components/category/Category"
 import LayoutWithSidebar from "@/app/components/layout/LayoutWithSidebar"
 import Loading from "@/app/loading"
 import { microcms } from "@/lib/microcms"
+import { blogPerPage } from "@/lib/utils"
 import { BlogType } from "@/types"
 import { Suspense } from "react"
 
