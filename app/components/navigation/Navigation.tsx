@@ -1,6 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
@@ -29,9 +30,16 @@ const Navigation = () => {
 
   return (
     <header>
-      <div className="mx-auto max-w-screen-lg px-2 py-8">
-        <Link href="/" className="font-bold text-xl block text-center">
-          SUZUKAZINE
+      <div className="mx-auto px-2 py-2 sm:py-4 text-center">
+        <Link href="/" className="inline-block">
+          <Image
+            src="/suzukazine-logo.svg"
+            width={120}
+            height={120}
+            alt="avatar"
+            className="sm:w-48 sm:h-auto"
+            priority={false}
+          />
         </Link>
       </div>
 
