@@ -2,6 +2,7 @@
 
 import BlogItem from "@/app/components/blog/BlogItem"
 import { BlogType } from "@/types"
+import PaginationButton from "../pagers/PaginationButton"
 
 interface CategoryProps {
   blogs: BlogType[]

@@ -2,7 +2,6 @@
 
 import { microcms } from "@/lib/microcms"
 import {
-  ArchiveMonthType,
   BlogType,
   CategoryCountType,
   SidebarData,
@@ -23,22 +22,6 @@ const fetchSidebarData = async (): Promise<SidebarData> => {
   // 最新の5件を取得
   const latestBlogs = allBlogs.slice(0, 5)
 
-  // アーカイブの年月を取得
-  const extractArchiveMonths = (blogs: BlogType[]): ArchiveMonthType[] => {
-    const monthCounts = new Map<string, ArchiveMonthType>()
-    blogs.forEach((blog) => {
-      const date = new Date(blog.publishedAt || blog.createdAt)
-      const year = date.getFullYear()
-      const month = date.getMonth() + 1
-      const key = `${year}-${month}`
-      const current = monthCounts.get(key) || { year, month, count: 0 }
-      monthCounts.set(key, { ...current, count: current.count + 1 })
-    })
-    return Array.from(monthCounts.values()).sort(
-      (a, b) => b.year - a.year || b.month - a.month
-    )
-  }
-
   // カテゴリごとの記事数を取得
   const extractCategoryCounts = (blogs: BlogType[]): CategoryCountType[] => {
     const categoryCounts = new Map<string, CategoryCountType>()
@@ -52,7 +35,6 @@ const fetchSidebarData = async (): Promise<SidebarData> => {
 
   return {
     latestBlogs,
-    archiveMonths: extractArchiveMonths(allBlogs),
     categoryCounts: extractCategoryCounts(allBlogs),
   }
 }
@@ -68,7 +50,6 @@ const Sidebar = () => {
 
   const latestBlogs = sidebarData?.latestBlogs || []
   const categoryCounts = sidebarData?.categoryCounts || []
-  const archiveMonths = sidebarData?.archiveMonths || []
 
   return (
     <div className="space-y-10">
