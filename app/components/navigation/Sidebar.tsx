@@ -56,7 +56,7 @@ const Sidebar = () => {
       <div className="border flex flex-col items-center justify-center p-5 space-y-5">
         <Link href="/about">
           <Image
-            src="/default.png"
+            src="/img_profile_muranaka.png"
             width={120}
             height={120}
             alt="avatar"
@@ -68,7 +68,7 @@ const Sidebar = () => {
         <div className="font-bold text-xl">村中</div>
 
         <div className="text-sm">
-          1999年生。三重県出身。筑波大学在学中、エンジニア社長のもとでSEOを1年間修行。個人でもゼロから立ち上げたWEBメディアを2年半かけてグロースさせ、法人に事業譲渡。新卒でBtoB SaaSの事業会社に就職し、オウンドメディアSEO、リスティング広告、ディスプレイ広告など幅広い業務のインハウス運用に従事（現職）。.jsとMicroCMSを使用したブログサイト構築チュートリアルです。技術ブログなど、すぐに運用できるようになっています。
+          1999年生まれ。鈴鹿市内の学校（白子小学校、鼓ヶ浦中学校、神戸高等学校）を卒業後、筑波大学に進学し、鈴鹿を離れる。大学時代から日本や世界各地を旅し、Xなどのプラットフォームを通じて旅の体験や情報を発信し、交流を楽しんでいる。
         </div>
       </div>
 
