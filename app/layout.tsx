@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "SUZUKAZINE",
-  description: "SUZUKAZIENは鈴鹿に関するWebサイトです。",
+  description: "SUZUKAZINEは、三重県鈴鹿市を中心としたグルメ・観光・イベント・ローカル情報を発信する、ローカルメディアです。鈴鹿に関する「マガジン」と「人（じん）」の意味で、この名前を付けました。",
 };
 
 export default function RootLayout({
