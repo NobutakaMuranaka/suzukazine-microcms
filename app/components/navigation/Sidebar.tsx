@@ -53,7 +53,7 @@ const Sidebar = () => {
 
   return (
     <div className="space-y-10">
-      <div className="border flex flex-col items-center justify-center p-5 space-y-5">
+      <div className="border flex flex-col items-center justify-center p-5 space-y-5 rounded-xl">
         <Link href="/about">
           <Image
             src="/img_profile_muranaka.png"
@@ -76,7 +76,7 @@ const Sidebar = () => {
       <div className="space-y-5">
         <div className="font-bold border-l-4 border-black pl-2">新着記事</div>
 
-        <div className="border text-sm">
+        <div className="border text-sm rounded-xl overflow-hidden">
           {isLoading ? (
             <div className="p-3 animate-pulse">Loading...</div>
           ) : (
@@ -114,7 +114,7 @@ const Sidebar = () => {
       <div className="space-y-5">
         <div className="font-bold border-l-4 border-black pl-2">カテゴリ</div>
 
-        <div className="border text-sm">
+        <div className="border text-sm rounded-xl overflow-hidden">
           {isLoading ? (
             <div className="p-3 animate-pulse">Loading...</div>
           ) : (
@@ -127,7 +127,7 @@ const Sidebar = () => {
                 key={index}
               >
                 <div>{category.name}</div>
-                <div className="border py-1 px-4 text-sm">{category.count}</div>
+                <div className="border py-1 px-4 text-sm rounded-xl overflow-hidden">{category.count}</div>
               </Link>
             ))
           )}
