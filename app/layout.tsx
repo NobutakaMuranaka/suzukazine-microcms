@@ -1,4 +1,5 @@
 import QueryProvider from "@/app/components/providers/QueryProvider";
+import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -15,6 +16,9 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body><QueryProvider>{children}</QueryProvider></body>
+      {!!process.env.GOOGLE_ANALYTICS_ID && (
+        <GoogleTagManager gtmId={process.env.GOOGLE_ANALYTICS_ID} />
+      )}
     </html>
   );
 }
