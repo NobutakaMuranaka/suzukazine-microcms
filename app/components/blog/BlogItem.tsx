@@ -15,7 +15,7 @@ const BlogItem = ({ blog, isRanking }: BlogItemProps) => {
   const categoryColor = blog.category.color || "gray"
 
   return (
-    <Link href={`/blog/${blog.id}`} className="border group rounded-xl overflow-hidden">
+    <Link href={`/blog/${blog.id}`} className="border group">
       <div className="aspect-video relative overflow-hidden">
         <Image
           src={blog.image.url}
